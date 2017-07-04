@@ -1,0 +1,14 @@
+dev:
+- 'csscomb'
+- 'concat_css'
+- 'cssmin'
+- 'concat'
+- 'uglify'
+- 'watch'
+
+build:
+- 'csscomb'
+- 'concat_css'
+- 'cssmin'
+- 'concat'
+- 'uglify'

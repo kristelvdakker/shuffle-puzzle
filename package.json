@@ -1,0 +1,21 @@
+{
+  "name": "Shuffle_Puzzle",
+  "version": "1.0.0",
+  "author": "Kristel van den Akker",
+  "description": "Package for the Shuffle Puzzle game",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-concat-css": "^0.3.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.0",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-csscomb": "^3.1.0",
+    "grunt-dev-update": "^2.0.0",
+    "grunt-notify": "^0.4.5",
+    "load-grunt-config": "^0.19.2",
+    "load-grunt-tasks": "^3.4.1"
+  },
+  "main": "Gruntfile.js"
+}

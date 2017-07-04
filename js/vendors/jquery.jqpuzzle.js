@@ -98,7 +98,7 @@
             for (var i = 0; i < $pieces.length; i++) {
                 var pieceIndex = (i < hole) ? i : i + 1;
                 if ($pieces.eq(i).attr('current') != pieceIndex) return false
-                    }
+            }
             return true
         };
         var checkOrder = function(numbersArray) {
@@ -131,7 +131,7 @@
                         return 6;
                     default:
                         return parseInt(property) || 0
-                }
+                                }
             }
             return 0
         };
@@ -288,7 +288,7 @@
                             choices.splice(randomIndex, 1)
                         }
                         if (((i + 1) < rounds) || checkOrder(shuffles[i])) i++
-                            }
+                    }
                     var animCounter = 0;
                     for (var i = 0; i < rounds; i++) {
                         var lastRound = ((i + 1) == rounds);
@@ -395,7 +395,7 @@
                 if (control.toggleNumbers) {
                     $numbersButton = $protoButton.clone().text(texts.toggleNumbersLabel).appendTo($controls);
                     if (settings.numbers) $numbersButton.addClass('jqp-toggle')
-                        }
+                }
                 var $buttons = $controls.children();
                 var $display, $counter, $timer;
                 if (control.counter || control.timer) {
@@ -407,23 +407,7 @@
                     if (control.counter) $counter = $protoField.clone().appendTo($display).after(texts.movesLabel + ' ');
                     if (control.timer) $timer = $protoField.clone().appendTo($display).after(texts.secondsLabel);
                     if (!settings.shuffle) $display.addClass('jqp-disabled')
-                        }
-                var $credits = $('<a/>').text('jqPuzzle').attr('href', 'http://www.2meter3.de/jqPuzzle/').css({
-                    'float': 'right',
-                    fontFamily: 'Verdana, Arial, Helvetica, sans-serif',
-                    fontSize: '9px',
-                    lineHeight: '12px',
-                    textDecoration: 'none',
-                    color: '#FFFFFF',
-                    backgroundColor: '#777777',
-                    backgroundImage: 'none',
-                    borderBottom: '1px dotted #FFFFFF',
-                    padding: '1px 3px 2px',
-                    marginRight: computedStyles.wrapper.border,
-                    position: 'static',
-                    display: 'inline',
-                    visibility: 'inherit'
-                });
+                }
                 var $panel = $('<div/>').css({
                     width: fullWidth + 2 * (computedStyles.wrapper.padding + computedStyles.wrapper.border),
                     position: 'absolute',
@@ -432,7 +416,7 @@
                     margin: '0px',
                     padding: '0px',
                     backgroundColor: 'transparent'
-                }).append($credits).append($controls);
+                }).append($controls);
                 var $gui = $('<div/>').attr('class', $srcImg.attr('class') || '').addClass('jqPuzzle').css({
                     width: fullWidth + 2 * (computedStyles.wrapper.padding + computedStyles.wrapper.border) + boxModelHack.gui.width,
                     height: fullHeight + 2 * (computedStyles.wrapper.padding + computedStyles.wrapper.border) + boxModelHack.gui.height,
@@ -456,7 +440,7 @@
                 });
                 $buttons.mousedown(function() {
                     if (!$(this).is('.jqp-disabled')) $(this).addClass('jqp-down')
-                        });
+                });
                 $buttons.mouseout(function() {
                     $(this).removeClass('jqp-down')
                 });
@@ -484,7 +468,7 @@
                         if (!timer) timer = new Timer(333, function(ms) {
                             seconds = Math.floor(ms / 1000);
                             if ($timer) $timer.val(seconds)
-                                });
+                        });
                         timer.start()
                     }
                     $piece.animate({
@@ -499,8 +483,8 @@
                                 $gui.addClass('jqp-solved');
                                 window.setTimeout(finishGame, 100)
                             } else lock = false
-                                } else lock = false
-                                    })
+                        } else lock = false
+                    })
                 });
                 if (control.shufflePieces) $shuffleButton.click(function() {
                     shuffle(animation.shuffleRounds, animation.shuffleSpeed)
